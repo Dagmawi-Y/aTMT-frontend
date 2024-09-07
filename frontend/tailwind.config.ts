@@ -7,7 +7,7 @@ const config: Config = {
 	safelist: ['dark'],
 	plugins: [require('daisyui')],
 	daisyui: {
-		themes: ['light', 'dark', 'cupcake', 'autumn']
+		themes: ['dark', 'autumn']
 	},
 	theme: {
 		container: {
