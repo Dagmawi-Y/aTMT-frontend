@@ -1,6 +1,7 @@
-<script></script>
+<script lang="ts">
+	import NavBar from '$lib/components/navBar/NavBar.svelte';
+</script>
 
-<div>
-	
-	<div></div>
+<div class=" bg-mainBg">
+	<NavBar />
 </div>
