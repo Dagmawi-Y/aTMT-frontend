@@ -5,17 +5,17 @@
 
 	let hover = false;
 	let logoSpring = spring(
-		{ angle: 0, distance: 100, scale: 0 },
+		{ x: 0, opacity: 0 },
 		{
-			stiffness: 0.1,
-			damping: 0.15
+			stiffness: 0.2,
+			damping: 1
 		}
 	);
 
 	$: if (hover) {
-		logoSpring.set({ angle: 360, distance: 60, scale: 1 });
+		logoSpring.set({ x: 5, opacity: 1 }); // Slide out 30px to the right and become visible
 	} else {
-		logoSpring.set({ angle: 0, distance: 100, scale: 0 });
+		logoSpring.set({ x: 0, opacity: 0 }); // Slide back and disappear
 	}
 
 	function goToHome() {
@@ -28,18 +28,22 @@
 </script>
 
 <button
-	class="group relative"
+	class="group relative inline-flex items-center"
 	on:mouseenter={() => (hover = true)}
 	on:mouseleave={() => (hover = false)}
 	on:click={goToHome}
 >
 	<div class="relative z-10">
-		<span class="font-poppins text-primary text-xl font-bold">asTheMachineThinkth</span>
+		<span
+			class="font-poppins text-primary text-xl font-bold opacity-80 transition-all duration-200 hover:opacity-100"
+			>OrangeAI</span
+		>
 	</div>
 
+	<!-- The logo is placed right next to the text -->
 	<div
-		class="pointer-events-none absolute left-1/2 top-1/2 h-20 w-20"
-		style="transform: translate(-50%, -50%) rotate({$logoSpring.angle}deg) translateZ({$logoSpring.distance}px) scale({$logoSpring.scale})"
+		class="pointer-events-none absolute h-10 w-10"
+		style="transform: translateX({$logoSpring.x}px) translateY(-50%); opacity: {$logoSpring.opacity}; left: 100%; top: 50%;"
 	>
 		<img src="/images/orangeBot.png" alt="Logo" class="h-full w-full object-contain" />
 	</div>
@@ -48,11 +52,11 @@
 <style>
 	button {
 		transition: transform 0.3s ease;
-		perspective: 1000px;
+		position: relative; /* Ensure relative positioning of the button */
 	}
 
 	button:hover {
-		transform: scale(1.05);
+		transform: scale(1);
 	}
 
 	div {
