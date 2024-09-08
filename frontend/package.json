@@ -29,7 +29,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"bits-ui": "^0.21.13",
 		"clsx": "^2.1.1",
+		"lodash-es": "^4.17.21",
+		"simple-svelte-autocomplete": "^2.5.2",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}
