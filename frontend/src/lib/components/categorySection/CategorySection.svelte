@@ -19,7 +19,7 @@
 		</button>
 	</div>
 	<div
-		class="grid h-full w-full grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5"
+		class="grid h-full w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4"
 	>
 		{#each category.posts as post}
 			<BlogCard

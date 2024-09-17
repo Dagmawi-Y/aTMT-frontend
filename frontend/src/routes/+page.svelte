@@ -8,61 +8,7 @@
 	import { onMount } from 'svelte';
 	import NavBarButton from '$lib/components/navBarButton/NavBarButton.svelte';
 	import CategorySection from '$lib/components/categorySection/CategorySection.svelte';
-
-	let featuredPosts = [
-		{
-			image:
-				'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-			title: 'Exploring the Mountains',
-			date: 'September 10, 2024',
-			author: 'John Doe',
-			readDuration: '6 min read',
-			authorAvatar:
-				'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-		},
-		{
-			image:
-				'https://images.unsplash.com/photo-1488197101134-27141b05740b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-			title: 'Mastering Remote Work Productivity',
-			date: 'September 5, 2024',
-			author: 'Alice Johnson',
-			readDuration: '8 min read',
-			authorAvatar: 'https://cdn.pixabay.com/photo/2016/04/01/11/25/avatar-1201757_1280.png'
-		},
-		{
-			image:
-				'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-			title: 'The Future of Web Development',
-			date: 'August 28, 2024',
-			author: 'Bob Williams',
-			readDuration: '5 min read',
-			authorAvatar: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png'
-		},
-		{
-			image:
-				'https://images.unsplash.com/photo-1519046904884-53103b68b207?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-			title: 'Top 10 Travel Destinations for 2025',
-			date: 'August 20, 2024',
-			author: 'Sarah Lee',
-			readDuration: '7 min read',
-			authorAvatar: 'https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_1280.png'
-		},
-		{
-			image:
-				'https://images.unsplash.com/photo-1500628550463-c8881a54d4d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-			title: 'Capturing Life Through a Lens',
-			date: 'August 15, 2024',
-			author: 'David Kim',
-			readDuration: '4 min read',
-			authorAvatar: 'https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_1280.png'
-		}
-	];
-
-	let technologyPosts = [];
-
-	let sciencePosts = [];
-
-	let historyPosts = [];
+	import Footer from '$lib/components/footer/Footer.svelte';
 
 	let categories = [
 		{
@@ -104,15 +50,6 @@
 					author: 'David Rodriguez',
 					readDuration: '4 min read',
 					authorAvatar: 'https://cdn.pixabay.com/photo/2016/11/01/21/11/avatar-1789663_1280.png'
-				},
-				{
-					image:
-						'https://images.unsplash.com/photo-1633418881117-0fa966a72721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-					title: 'Virtual Reality: The Next Big Thing?',
-					date: 'August 4, 2024',
-					author: 'Jennifer Wilson',
-					readDuration: '8 min read',
-					authorAvatar: 'https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027366_1280.png'
 				}
 			]
 		},
@@ -156,15 +93,6 @@
 					author: 'Olivia Anderson',
 					readDuration: '7 min read',
 					authorAvatar: 'https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_1280.png'
-				},
-				{
-					image:
-						'https://images.unsplash.com/photo-1546084237-e7196d205d7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80',
-					title: 'The Wonders of the Natural World',
-					date: 'July 28, 2024',
-					author: 'Ethan Thomas',
-					readDuration: '4 min read',
-					authorAvatar: 'https://cdn.pixabay.com/photo/2012/04/14/12/57/cartoon-34294_1280.png'
 				}
 			]
 		},
@@ -209,15 +137,6 @@
 					author: 'Logan Martinez',
 					readDuration: '8 min read',
 					authorAvatar: 'https://cdn.pixabay.com/photo/2021/01/16/09/09/woman-5923394_1280.jpg'
-				},
-				{
-					image:
-						'https://images.unsplash.com/photo-1552252654-e4d0a78fb78d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-					title: 'The Wonders of the Ancient World',
-					date: 'July 1, 2024',
-					author: 'Amelia Robinson',
-					readDuration: '5 min read',
-					authorAvatar: 'https://cdn.pixabay.com/photo/2017/01/31/13/05/cameo-2023867_1280.png'
 				}
 			]
 		},
@@ -350,6 +269,28 @@
 			<CategorySection {category} />
 		{/each}
 	</div>
+	<div class=" flex flex-col items-center justify-center py-10">
+		<div class=" mb-5 flex flex-col items-center justify-center">
+			<img src="/icons/mail.png" alt="" width="130" height="130" />
+			<div class=" my-3 flex flex-col items-center justify-center">
+				<span class=" mb-1 text-2xl font-bold">Subscribe For the lastest updates</span>
+				<span class=" text-sm text-gray-400"
+					>Subscribe to newsletter and never miss the new post every week.</span
+				>
+			</div>
+		</div>
+
+		<div class=" flex h-10 flex-1 flex-row items-center justify-center gap-3">
+			<label class="input flex h-10 gap-2">
+				<input type="text" class="" placeholder="Enter your email here..." />
+			</label>
+			<button
+				class=" bg-secondary hover:bg-primary rounded-md px-5 py-2 text-white transition-all duration-100"
+				>Subscribe</button
+			>
+		</div>
+	</div>
+	<Footer />
 </div>
 
 <style>

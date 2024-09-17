@@ -10,7 +10,7 @@
 <button class="  transition-all duration-200 hover:rotate-1 hover:scale-95 hover:shadow-lg"
 	><div class=" flex flex-col rounded-md bg-slate-100 px-3 py-3 shadow-md">
 		<!-- Blog card top/Image and title -->
-		<div class=" pb-10">
+		<div class=" h-44 pb-10">
 			<div class="flex h-24">
 				<img src={image} alt="" class=" h-full w-full rounded-md object-cover" />
 			</div>

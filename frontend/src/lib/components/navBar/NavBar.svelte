@@ -41,8 +41,11 @@
 	class:translate-y-full={!visible}
 	class:bg={atTop}
 	class:shadow-md={atTop}
-	class:bg-opacity-90={!atTop}
-	class:backdrop-blur-md={!atTop}
+	class:bg-opacity-20={!atTop}
+	class:backdrop-blur-sm={!atTop}
+	class:px-14={atTop}
+	class:px-28={!atTop}
+	class:bg-slate-300={!atTop}
 >
 	<div
 		class="flex w-full flex-col items-center justify-between space-y-3 px-4 py-3 transition-all duration-300 md:flex-row md:space-y-0 md:px-16"
