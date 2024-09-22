@@ -213,6 +213,25 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lottiefiles/dotlottie-svelte@^0.3.19":
+  version "0.3.19"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/dotlottie-svelte/-/dotlottie-svelte-0.3.19.tgz#7434f3dea2d5aa3a8799a54ca60723b9fb56860d"
+  integrity sha512-HRM5PReQwaJUnayhUiZbo4PX70FQ/iKi3lN8EKJBdzNsnta6Y1rtINppjzZZLZbFCFnPzvfVZjqubtmn7TpY7w==
+  dependencies:
+    "@lottiefiles/dotlottie-web" "0.33.0"
+
+"@lottiefiles/dotlottie-web@0.33.0":
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/dotlottie-web/-/dotlottie-web-0.33.0.tgz#104beeb2bda223fbd76673b0bf7ee1a4ea59f78f"
+  integrity sha512-/KerIs0UkmwuDKYWlNGWYSSZkZaLNXXHqg6qCnP7P2JuzgI4bHRmlIk3+LoJjl/jWqd3WyI4t5oRV6ch0sQwvg==
+
+"@lottiefiles/svelte-lottie-player@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/svelte-lottie-player/-/svelte-lottie-player-0.3.1.tgz#6883157ecbe876a38a39d392fb8f60b7d688c686"
+  integrity sha512-WnJasuRJJiKl1nSaZeYpaorNCdVOeR9FcWve/QLliPGxF6UUkS88uGH0Vd4ExP8PSpkagyQ7QYRBGCymBIxVxQ==
+  dependencies:
+    lottie-web "^5.10.0"
+
 "@melt-ui/svelte@0.76.2":
   version "0.76.2"
   resolved "https://registry.yarnpkg.com/@melt-ui/svelte/-/svelte-0.76.2.tgz#9d6a578695ac257e34710fdeff3c8a40c8c25f31"
@@ -995,6 +1014,11 @@ lodash-es@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
   integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
+
+lottie-web@^5.10.0:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.12.2.tgz#579ca9fe6d3fd9e352571edd3c0be162492f68e5"
+  integrity sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==
 
 lru-cache@^10.2.0:
   version "10.4.3"

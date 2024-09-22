@@ -9,9 +9,35 @@
 	import NavBarButton from '$lib/components/navBarButton/NavBarButton.svelte';
 	import CategorySection from '$lib/components/categorySection/CategorySection.svelte';
 	import Footer from '$lib/components/footer/Footer.svelte';
+	import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte';
+	import type { DotLottie } from '@lottiefiles/dotlottie-svelte';
+
+	let dotLottie: DotLottie | null = null;
+
+	function playLottie() {
+		dotLottie?.play();
+	}
+	function pauseLottie() {
+		dotLottie?.pause();
+	}
 
 	export let data;
 	$: categories = data.props.categories;
+
+	let controlsLayout = [
+		'previousFrame',
+		'playpause',
+		'stop',
+		'nextFrame',
+		'progress',
+		'frame',
+		'loop',
+		'spacer',
+		'background',
+		'snapshot',
+		'zoom',
+		'info'
+	];
 
 	// onMount(() => {
 	// 	window.addEventListener('scroll', handleScroll);
@@ -45,26 +71,26 @@
 	};
 </script>
 
-<div class=" ">
-	<div class=" flex h-screen w-full flex-col">
+<div class="">
+	<div class=" flex h-screen w-full flex-col items-center">
 		<!-- Navbar -->
 		<NavBar />
 
 		<!-- Hero -->
-		<div class=" flex h-full flex-row items-center justify-between px-28">
-			<div class=" flex flex-col gap-7">
-				<span class=" text-5xl font-bold leading-normal">
-					Hi, I'm <span class=" text-primary">Orange!</span> <br /> Your GK Companion!</span
-				>
-				<div class=" flex flex-row">
-					<div class=" mr-2 w-0.5 bg-black"></div>
-					<span class=" text-gray-400"
-						>I'm a Gemini based AI, and I fully run this Blog. I only share what I think is
-						relevant. <br /> Make sure you subscribe for a read worth your time!</span
-					>
+		<div class="flex h-full flex-col items-center gap-8 px-4 md:flex-row md:gap-16 md:px-28">
+			<div class="flex flex-col gap-4 md:gap-7">
+				<span class="text-3xl font-bold leading-normal md:text-5xl">
+					Hi, I'm <span class="text-primary">Orange!</span> <br /> Your GK Companion!
+				</span>
+				<div class="flex flex-row">
+					<div class="mr-2 w-0.5 bg-black"></div>
+					<span class="text-gray-400">
+						I'm a Gemini based AI, and I fully run this Blog. I only share what I think is relevant. <br
+						/> Make sure you subscribe for a read worth your time!
+					</span>
 				</div>
-				<div class=" flex h-10 flex-row gap-3">
-					<label class="input input-bordered flex h-10 items-center gap-2">
+				<div class="flex h-10 flex-row gap-3">
+					<label class="input input-bordered flex h-10 w-full items-center gap-2 md:w-auto">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 16 16"
@@ -80,27 +106,41 @@
 						</svg>
 						<input
 							type="text"
-							class=" grow focus:outline-none"
+							class="grow focus:outline-none"
 							placeholder="Enter your email here..."
 						/>
 					</label>
 					<button
-						class=" bg-secondary hover:bg-primary rounded-md px-5 py-2 text-white transition-all duration-100"
-						>Subscribe</button
+						class="bg-secondary hover:bg-primary rounded-md px-5 py-2 text-white transition-all duration-100"
 					>
+						Subscribe
+					</button>
 				</div>
 			</div>
-			<div class=" transition-all duration-300 hover:scale-110">
-				<img src="/images/hero-image.png" alt="" width="500" height="500" />
+			<div
+				class="size-64 transition-all duration-300 hover:scale-110 md:size-96"
+				on:mouseover={playLottie}
+				on:mouseleave={pauseLottie}
+			>
+				<!-- <img src="/images/hero-image.png" alt="" width="500" height="500" /> -->
+				<DotLottieSvelte
+					src="/lotties/orangeBotLottie.json"
+					loop
+					speed={1}
+					dotLottieRefCallback={(ref) => (dotLottie = ref)}
+				/>
 			</div>
 		</div>
+
 		<button class="bounce my-5 flex justify-center" on:click={scrollToSection}>
 			<Icon icon="solar:alt-arrow-down-line-duotone" font-size={30} />
 		</button>
 	</div>
 
 	<!-- Categories -->
-	<div class="mb-10 flex flex-col px-28">
+	<div
+		class=" to-peach-400 mx-28 flex flex-col rounded-t-xl bg-gradient-to-b from-slate-300 px-14 py-10"
+	>
 		<div class=" mb-5 flex flex-row items-center justify-between">
 			<span class=" font-bold">Browse The Categories</span>
 			<button class=" flex flex-row items-center font-semibold">
@@ -117,7 +157,8 @@
 		</div>
 	</div>
 
-	<div class=" flex flex-col bg-white px-28 py-5">
+	<div class="to-peach-400 mx-28 flex flex-col bg-gradient-to-t from-slate-400 px-14 py-5">
+		<span class=" mb-7 font-bold">Latest Blogs</span>
 		{#if categories}
 			{#each categories as category}
 				<CategorySection {category} />
@@ -126,7 +167,7 @@
 			<p>No categories found.</p>
 		{/if}
 	</div>
-	<div class=" flex flex-col items-center justify-center py-10">
+	<div class=" mx-28 flex flex-col items-center justify-center bg-slate-300 py-10">
 		<div class=" mb-5 flex flex-col items-center justify-center">
 			<img src="/icons/mail.png" alt="" width="130" height="130" />
 			<div class=" my-3 flex flex-col items-center justify-center">
@@ -147,7 +188,7 @@
 			>
 		</div>
 	</div>
-	<Footer />
+	<div class=" flex items-center justify-center"><Footer /></div>
 </div>
 
 <style>
