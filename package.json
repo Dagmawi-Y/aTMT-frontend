@@ -35,6 +35,8 @@
 		"lodash-es": "^4.17.21",
 		"mode-watcher": "^0.4.1",
 		"simple-svelte-autocomplete": "^2.5.2",
+		"snarkdown": "1.0.2",
+		"svelte-markdown": "^0.4.1",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}

@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Daggy\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D @types/simple-svelte-autocomplete
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add -D @types/snarkdown
 
 PATH: 
   C:\Program Files\Microsoft\jdk-17.0.12.7-hotspot\bin;C:\Program Files\Java\jdk-20\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Daggy\AppData\Local\Android\Sdk\build-tools;C:\Users\Daggy\AppData\Local\Android\Sdk\tools;C:\xampp\php;C:\ProgramData\chocolatey\bin;C:\Users\Daggy\AppData\Roaming\nvm;C:\Program Files\nodejs;%LOCALAPPDATA%\Android\Sdk\platform-tools;C:\Program Files\Docker;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Daggy\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\Daggy\AppData\Local\Pub\Cache\bin;C:\ffmpeg;C:\Users\Daggy\AppData\Local\Programs\Python\Python311\Scripts;C:\MinGW\bin;C:\elastic_stack\elasticsearch-8.9.2\bin;C:\elastic_stack\kibana-8.9.2\bin;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\yt-dlp;C:\nginx;C:\Program Files\nodejs\;C:\vault;C:\Program Files\Git\cmd;C:\Users\Daggy\anaconda3;C:\Users\Daggy\anaconda3\Library\mingw-w64\bin;C:\Users\Daggy\anaconda3\Library\usr\bin;C:\Users\Daggy\anaconda3\Library\bin;C:\Users\Daggy\anaconda3\Scripts;C:\Users\Daggy\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Daggy\AppData\Local\Programs\Python\Python311\;C:\Users\Daggy\AppData\Local\Microsoft\WindowsApps;C:\Users\Daggy\AppData\Local\Programs\Microsoft VS Code\bin;C:\src\flutter\flutter\bin;C:\Users\Daggy\AppData\Local\Android\Sdk\platform-tools;C:\Users\Daggy\AppData\Local\Android\Sdk\tools;C:\Users\Daggy\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Daggy\AppData\Local\Android\Sdk\platform-tools;C:\Users\Daggy\AppData\Local\GitHubDesktop\bin;C:\tools\dart-sdk\bin;C:\Users\Daggy\AppData\Roaming\Pub\Cache\bin;C:\Program Files\Docker;C:\Users\Daggy\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\Daggy\AppData\Local\Pub\Cache\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.1\bin;;C:\Program Files\JetBrains\PyCharm 2024.1.1\bin;;C:\MinGW\bin;C:\Program Files\JetBrains\CLion 2024.1.1\bin;;C:\Program Files\JetBrains\DataSpell 2023.1.3\bin;;C:\Users\Daggy\AppData\Local\Programs\mongosh\;C:\nginx;C:\Users\Daggy\AppData\Roaming\npm;C:\vault;
@@ -8,22 +8,22 @@ Yarn version:
   1.22.19
 
 Node version: 
-  20.5.0
+  20.16.0
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fsimple-svelte-autocomplete: Not found
-      at params.callback [as _callback] (C:\Users\Daggy\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
-      at self.callback (C:\Users\Daggy\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
-      at Request.emit (node:events:514:28)
-      at Request.<anonymous> (C:\Users\Daggy\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
-      at Request.emit (node:events:514:28)
-      at IncomingMessage.<anonymous> (C:\Users\Daggy\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
-      at Object.onceWrapper (node:events:628:28)
-      at IncomingMessage.emit (node:events:526:35)
-      at endReadableNT (node:internal/streams/readable:1376:12)
+  Error: https://registry.yarnpkg.com/@types%2fsnarkdown: Not found
+      at params.callback [as _callback] (C:\Users\Daggy\AppData\Roaming\nvm\v18.17.0\node_modules\yarn\lib\cli.js:66145:18)
+      at self.callback (C:\Users\Daggy\AppData\Roaming\nvm\v18.17.0\node_modules\yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:519:28)
+      at Request.<anonymous> (C:\Users\Daggy\AppData\Roaming\nvm\v18.17.0\node_modules\yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:519:28)
+      at IncomingMessage.<anonymous> (C:\Users\Daggy\AppData\Roaming\nvm\v18.17.0\node_modules\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:633:28)
+      at IncomingMessage.emit (node:events:531:35)
+      at endReadableNT (node:internal/streams/readable:1696:12)
       at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
@@ -41,6 +41,7 @@ npm manifest:
   		"format": "prettier --write ."
   	},
   	"devDependencies": {
+  		"@iconify/svelte": "^4.0.2",
   		"@sveltejs/adapter-auto": "^3.0.0",
   		"@sveltejs/kit": "^2.0.0",
   		"@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -61,7 +62,10 @@ npm manifest:
   		"bits-ui": "^0.21.13",
   		"clsx": "^2.1.1",
   		"lodash-es": "^4.17.21",
+  		"mode-watcher": "^0.4.1",
   		"simple-svelte-autocomplete": "^2.5.2",
+  		"snarkdown": "1.0.2",
+  		"svelte-markdown": "^0.4.1",
   		"tailwind-merge": "^2.5.2",
   		"tailwind-variants": "^0.2.1"
   	}
@@ -222,6 +226,18 @@ Lockfile:
     version "0.2.7"
     resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
     integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
+  
+  "@iconify/svelte@^4.0.2":
+    version "4.0.2"
+    resolved "https://registry.yarnpkg.com/@iconify/svelte/-/svelte-4.0.2.tgz#c506db52d9b83f18878f47aae42cf5e470b0f146"
+    integrity sha512-6BSrU85FzGfhQD3bTXpnkCCvBAglEt8T9QednVnXAYm4C+d3464y+pYMzhQNJm5mPId2cuiw+2wXlDflXllHDw==
+    dependencies:
+      "@iconify/types" "^2.0.0"
+  
+  "@iconify/types@^2.0.0":
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
+    integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
   
   "@internationalized/date@^3.5.0", "@internationalized/date@^3.5.1":
     version "3.5.5"
@@ -458,6 +474,11 @@ Lockfile:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.5.tgz#a6ce3e556e00fd9895dd872dd172ad0d4bd687f4"
     integrity sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==
+  
+  "@types/marked@^5.0.1":
+    version "5.0.2"
+    resolved "https://registry.yarnpkg.com/@types/marked/-/marked-5.0.2.tgz#ca6b0cd7a5c8799c8cd0963df0b3e1a9021dcdfa"
+    integrity sha512-OucS4KMHhFzhz27KxmWg7J+kIYqyqoW5kdIEI319hqARQQUTqhao3M/F+uFnDXD0Rg72iDDZxZNxq5gvctmLlg==
   
   "@types/node@^22.5.4":
     version "22.5.4"
@@ -1064,6 +1085,11 @@ Lockfile:
     dependencies:
       "@jridgewell/sourcemap-codec" "^1.5.0"
   
+  marked@^5.1.2:
+    version "5.1.2"
+    resolved "https://registry.yarnpkg.com/marked/-/marked-5.1.2.tgz#62b5ccfc75adf72ca3b64b2879b551d89e77677f"
+    integrity sha512-ahRPGXJpjMjwSOlBoTMZAK7ATXkli5qCPxZ21TG44rx1KEo44bii4ekgTDQPNRQ4Kh7JMb9Ub1PVk1NxRSsorg==
+  
   mdn-data@2.0.30:
     version "2.0.30"
     resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
@@ -1117,6 +1143,11 @@ Lockfile:
     integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
     dependencies:
       minimist "^1.2.6"
+  
+  mode-watcher@^0.4.1:
+    version "0.4.1"
+    resolved "https://registry.yarnpkg.com/mode-watcher/-/mode-watcher-0.4.1.tgz#05022fbc5f8d21bca35f7bcd116f39c8c6f3864b"
+    integrity sha512-bNC+1NXmwEFZtziCdZSgP7HFQTpqJPcQn9GwwJQGSf6SBF3neEPYV1uRwkYuAQwbsvsXIYtzaqgedDzJ7D1mhg==
   
   mri@^1.1.0:
     version "1.2.0"
@@ -1434,6 +1465,11 @@ Lockfile:
       mrmime "^2.0.0"
       totalist "^3.0.0"
   
+  snarkdown@1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/snarkdown/-/snarkdown-1.0.2.tgz#274301cca089375e6f85082cb0649637dd84f9b7"
+    integrity sha512-D6qvXH0mokvm2WImesnbABIETwJEcZ82vcJwbfnPavEFg94Mk3vI18WBCbBoqYt043N3jzPt16qHlkAxwtkgLQ==
+  
   sorcery@^0.11.0:
     version "0.11.1"
     resolved "https://registry.yarnpkg.com/sorcery/-/sorcery-0.11.1.tgz#7cac27ae9c9549b3cd1e4bb85317f7b2dc7b7e22"
@@ -1524,6 +1560,14 @@ Lockfile:
     version "0.16.0"
     resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.16.0.tgz#9f345b7d1c1662f1613747ed7e82507e376c1716"
     integrity sha512-Gyc7cOS3VJzLlfj7wKS0ZnzDVdv3Pn2IuVeJPk9m2skfhcu5bq3wtIZyQGggr7/Iim5rH5cncyQft/kRLupcnA==
+  
+  svelte-markdown@^0.4.1:
+    version "0.4.1"
+    resolved "https://registry.yarnpkg.com/svelte-markdown/-/svelte-markdown-0.4.1.tgz#ddf13cfd6e0f29a02a82854b48766b527ec90f8d"
+    integrity sha512-pOlLY6EruKJaWI9my/2bKX8PdTeP5CM0s4VMmwmC2prlOkjAf+AOmTM4wW/l19Y6WZ87YmP8+ZCJCCwBChWjYw==
+    dependencies:
+      "@types/marked" "^5.0.1"
+      marked "^5.1.2"
   
   svelte-preprocess@^5.1.3:
     version "5.1.4"

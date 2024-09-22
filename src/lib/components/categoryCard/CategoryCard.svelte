@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let title: any;
 	export let image_url: any;
+	export let category_id: any;
 </script>
 
 <button
