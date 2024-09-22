@@ -16,6 +16,7 @@
 			<div class="flex h-24">
 				<img src={image} alt="" class=" h-full w-full rounded-md object-cover" />
 			</div>
+
 			<div class=" mx-2 my-3 text-sm font-bold"><SvelteMarkdown source={title} /></div>
 		</div>
 
